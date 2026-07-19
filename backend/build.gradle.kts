@@ -39,8 +39,6 @@ dependencies {
     // Flyway Migrations
     implementation("org.flywaydb:flyway-core:10.10.0")
     implementation("org.flywaydb:flyway-database-postgresql:10.10.0")
-    // implementation("org.flywaydb:flyway-database-h2:10.10.0") // try without it first
-
     // Firebase Admin SDK
     implementation("com.google.firebase:firebase-admin:9.4.3")
 

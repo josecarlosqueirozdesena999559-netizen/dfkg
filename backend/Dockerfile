@@ -1,12 +1,14 @@
 # Build stage
-FROM gradle:8.5-jdk17 AS build
-COPY --chown=gradle:gradle . /home/gradle/src
-WORKDIR /home/gradle/src
-RUN gradle installDist --no-daemon
+FROM openjdk:17-slim AS build
+WORKDIR /home/app
+COPY . .
+RUN chmod +x gradlew
+RUN ./gradlew installDist --no-daemon
 
 # Run stage
 FROM openjdk:17-slim
 EXPOSE 8080
 RUN mkdir /app
-COPY --from=build /home/gradle/src/build/install/decisoes-backend /app/decisoes-backend
-ENTRYPOINT ["/app/decisoes-backend/bin/decisoes-backend"]
+COPY --from=build /home/app/build/install/decisoes-backend /app/decisoes-backend
+WORKDIR /app/decisoes-backend
+ENTRYPOINT ["bin/decisoes-backend"]
