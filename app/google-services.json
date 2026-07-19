@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "427058993659",
+    "project_id": "tsdfd-aad5d",
+    "storage_bucket": "tsdfd-aad5d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:427058993659:android:3c7eb0d013a627102dd35e",
+        "android_client_info": {
+          "package_name": "com.consultmedpereiro.novo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAU_jvYbTz4iNAbtECc0vNYDY2_iwhuEoI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

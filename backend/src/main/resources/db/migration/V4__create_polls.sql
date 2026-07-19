@@ -1,0 +1,21 @@
+CREATE TABLE polls (
+    id UUID PRIMARY KEY,
+    post_id UUID UNIQUE NOT NULL,
+    question TEXT NOT NULL,
+    total_votes BIGINT NOT NULL DEFAULT 0,
+    expires_at TIMESTAMP WITH TIME ZONE NULL,
+    created_at TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT NOW(),
+    updated_at TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT NOW(),
+    CONSTRAINT fk_polls_post FOREIGN KEY (post_id) REFERENCES posts(id) ON DELETE CASCADE
+);
+
+CREATE TABLE poll_options (
+    id UUID PRIMARY KEY,
+    poll_id UUID NOT NULL,
+    text VARCHAR(300) NOT NULL,
+    image_url TEXT NULL,
+    votes_count BIGINT NOT NULL DEFAULT 0,
+    display_order INTEGER NOT NULL,
+    created_at TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT NOW(),
+    CONSTRAINT fk_options_poll FOREIGN KEY (poll_id) REFERENCES polls(id) ON DELETE CASCADE
+);

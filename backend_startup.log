@@ -1,0 +1,49 @@
+Starting a Gradle Daemon, 1 busy and 1 incompatible and 7 stopped Daemons could not be reused, use --status for details
+Reusing configuration cache.
+> Task :backend:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :backend:processResources UP-TO-DATE
+> Task :backend:compileKotlin UP-TO-DATE
+> Task :backend:compileJava NO-SOURCE
+> Task :backend:classes UP-TO-DATE
+
+> Task :backend:run
+2026-07-19 22:33:06.651 [main] INFO  io.ktor.server.Application - Autoreload is disabled because the development mode is off.
+2026-07-19 22:33:06.775 [main] INFO  Application - Starting Decisões Social Network Backend API...
+2026-07-19 22:33:06.776 [main] INFO  c.d.s.database.DatabaseConnector - Using H2 database at ./decisoes_db
+2026-07-19 22:33:06.778 [main] INFO  c.d.s.database.DatabaseConnector - Initializing database connection to: jdbc:h2:file:./decisoes_db;MODE=PostgreSQL;DATABASE_TO_LOWER=TRUE;DEFAULT_NULL_ORDERING=HIGH
+2026-07-19 22:33:06.807 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-07-19 22:33:07.132 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./decisoes_db user=SA
+2026-07-19 22:33:07.134 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-07-19 22:33:07.156 [main] INFO  c.d.s.database.DatabaseConnector - Running Flyway migrations...
+2026-07-19 22:33:07.584 [main] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:h2:file:./decisoes_db (H2 2.2)
+2026-07-19 22:33:07.598 [main] WARN  o.f.c.i.database.base.Database - Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2026-07-19 22:33:07.659 [main] INFO  o.f.core.internal.command.DbValidate - Successfully validated 7 migrations (execution time 00:00.047s)
+2026-07-19 22:33:07.672 [main] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "public": 7
+2026-07-19 22:33:07.678 [main] INFO  o.f.core.internal.command.DbMigrate - Schema "public" is up to date. No migration necessary.
+2026-07-19 22:33:07.688 [main] INFO  c.d.s.database.DatabaseConnector - Flyway migrations completed successfully
+2026-07-19 22:33:07.699 [main] WARN  c.d.s.security.FirebaseAuthService - Firebase credentials not found in env (FIREBASE_CREDENTIALS_JSON or FIREBASE_CREDENTIALS_PATH). Trying Application Default Credentials.
+2026-07-19 22:33:08.065 [main] INFO  c.d.s.security.FirebaseAuthService - Firebase Admin SDK successfully initialized
+2026-07-19 22:33:08.065 [main] INFO  Application - Running database seeder check...
+2026-07-19 22:33:08.214 [DefaultDispatcher-worker-2] INFO  c.d.shared.database.DatabaseSeeder - Database already seeded with 10 users. Skipping seeder.
+2026-07-19 22:33:08.327 [main] INFO  io.ktor.server.Application - Application started in 1.971 seconds.
+Exception in thread "main" java.net.BindException: Address already in use
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:577)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.netBind(ServerSocketChannelImpl.java:344)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:301)
+	at io.netty.channel.socket.nio.NioServerSocketChannel.doBind(NioServerSocketChannel.java:141)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.bind(AbstractChannel.java:561)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.bind(DefaultChannelPipeline.java:1281)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeBind(AbstractChannelHandlerContext.java:600)
+	at io.netty.channel.AbstractChannelHandlerContext.bind(AbstractChannelHandlerContext.java:579)
+	at io.netty.channel.DefaultChannelPipeline.bind(DefaultChannelPipeline.java:922)
+	at io.netty.channel.AbstractChannel.bind(AbstractChannel.java:259)
+	at io.netty.bootstrap.AbstractBootstrap$2.run(AbstractBootstrap.java:380)
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:1583)

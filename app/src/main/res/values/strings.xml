@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Decisões</string>
+    <string name="subtitle">Sua voz. Suas escolhas. Nosso futuro.</string>
+    <string name="btn_entrar">Entrar</string>
+    <string name="btn_criar_conta">Criar conta</string>
+    <string name="terms_privacy">Ao continuar, você concorda com nossos Termos de Uso e Política de Privacidade</string>
+    <string name="nav_inicio">Início</string>
+    <string name="nav_explorar">Explorar</string>
+    <string name="nav_criar">Criar</string>
+    <string name="nav_mensagens">Mensagens</string>
+    <string name="nav_perfil">Perfil</string>
+    <string name="menu_notificacoes">Notificações</string>
+    <string name="menu_salvos">Salvos</string>
+    <string name="menu_seguindo">Seguindo</string>
+    <string name="menu_configuracoes">Configurações</string>
+    <string name="menu_ajuda">Ajuda e suporte</string>
+    <string name="menu_sair">Sair</string>
+    <string name="menu_tema">Tema</string>
+    <string name="search_placeholder">Buscar mensagens</string>
+    <string name="tab_todas">Todas</string>
+    <string name="tab_nao_lidas">Não lidas</string>
+    <string name="tab_grupos">Grupos</string>
+    <string name="edit_profile">Editar perfil</string>
+    <string name="tab_enquetes">Enquetes</string>
+    <string name="tab_pensamentos">Pensamentos</string>
+    <string name="tab_curtidas">Curtidas</string>
+</resources>

@@ -1,0 +1,8 @@
+{
+  "name": "Decisões",
+  "description": "Sua voz. Suas escolhas. Nosso futuro. Um aplicativo de votação social, enquetes interativas e mensagens em tempo real.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
